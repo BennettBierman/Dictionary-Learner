@@ -44,20 +44,23 @@ There are three main features of the program accessed through the flag: --func
 
 The three central features can be fine tuned with a number of flags
 
+Flags to use with all three functions:
+
+- --pic_size [int]: size of plots when original image and sparse representation are plotted
+
 Flags to use with --func train or --func train_save:
 
 - --pat_size [int]: patch sized used when augmenting original image for dictionary learning
-- --pic_size [int]: size of plots when original image and sparse representation are plotted
-- -atoms [int]: number of atoms in the learned dictionary
+- --atoms [int]: number of atoms in the learned dictionary
 - sparse [int]: sparsity of each column in the sparse representation 
 - --iter [int]: number of iterations K-SVD will be run
 - --image [str]: name of file in images folder (do not need to include ".png") than can be used for dictionary learning
 - --path [str]: path to any image on computer that can also be used for dictionary learning
 
-Flags to use with --func train_save:
+Flags to use with just --func train_save:
 
 - --save_state [str]: prefix used to name saved state text files that will be created in the encodings folder
 
-Flags to use with --func load_show:
+Flags to use with just --func load_show:
 
 - --load_state [str]: prefix of files in encodings folder that you wish to load the state of
