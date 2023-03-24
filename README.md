@@ -64,3 +64,11 @@ Flags to use with just --func train_save:
 Flags to use with just --func load_show:
 
 - --load_state [str]: prefix of files in encodings folder that you wish to load the state of
+
+**FUTURE IMPROVEMENTS**
+
+There are two central improvements I would like to make. 
+
+First, I would like to add dictionary learning to colored images, not just black and white ones. 
+
+Secondly, I would like to reimplement my K-SVD algorithm using the QR Decomposition approach. This should speed up the runtime of the dictionary update step
