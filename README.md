@@ -2,14 +2,15 @@
 **Program that deploys K-SVD and Orthogonal Matching Pursuit to perform dictionary learning from black-and-white images**
 
 
-**Environment Installation:**
+**ENVIRONMENT INSTALLATION:**
 - Clone/fork project
 - Install the appropriate version of conda for your OS
 - Navigate to directory
 - Enter: conda env create -f environment.yml
 
 
-**Repo Outline:**
+**REPO OUTLINE:**
+
 This program allows you to create novel spare representations of images through K-SVD and OMP dictionary learning
 Directories:
 - **images**: folder for saving images that the program can easily access
