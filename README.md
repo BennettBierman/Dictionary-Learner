@@ -18,12 +18,12 @@ This program allows you to create novel sparse representations of images through
 Directories:
 
 - **images**: folder for saving images that the program can easily access
-- **encodings**: folder holds text representation (of numpy matrices) of sparse encodings (original image, dictionary, sparse encoding)
+- **encodings**: folder holds text representations (of numpy matrices) of sparse encodings (original image, dictionary, sparse encoding)
 
 Files:
 
-- **main.py**: access point of the entire project
-- **dict_learner.py**: object responsible for running dictionary learning algorithms and holding data
+- **main.py**: access point of the project
+- **dict_learner.py**: object responsible for running dictionary learning algorithms and maintaining data
 - **image_utils.py**: utility functions for easily handling image data
 
 
@@ -32,10 +32,10 @@ Files:
 
 All features can be accessed through the starting command: python main.py
 
-There are three main features of the program accessed through the flag: --func
+There are three main features of the program that are accessed through the flag: --func
 
-- **train**: creates a new spare representation and dictionary from an input image then plots the recreated and original images
-- **train_save**: performs the actions of train, then saves the state of your DictionaryLearner object (original image, dictionary, spare representation) in text files in the encodings directory
+- **train**: creates a new spare representation and dictionary from an input image, plots the recreated and original images, and prints information about the accuracy and sparsity of the representation. The accuracy is calculated by dividing the norm of the residual by the norm of the image we are representing, and subtracting this fraction from one.
+- **train_save**: performs the actions of train, then saves the state of your DictionaryLearner object (original image, dictionary, spare representation) in text files in the encodings directory. Given a prefix "x", files are saved as x_image, x_dictionary, and x_sparse in this folder
 - **load_show**: uploades state from saved text files in encodings and plots original image and sparse representation
 
 
@@ -50,11 +50,11 @@ Flags to use with all three functions:
 
 Flags to use with --func train or --func train_save:
 
-- --pat_size [int]: patch sized used when augmenting original image for dictionary learning
+- --pat_size [int]: patch size used when augmenting original image for dictionary learning
 - --atoms [int]: number of atoms in the learned dictionary
 - sparse [int]: sparsity of each column in the sparse representation 
-- --iter [int]: number of iterations K-SVD will be run
-- --image [str]: name of file in images folder (do not need to include ".png") than can be used for dictionary learning
+- --iter [int]: number of iterations K-SVD run
+- --image [str]: name of file in images folder (do not need to include ".png" or file's path) that can be used for dictionary learning
 - --path [str]: path to any image on computer that can also be used for dictionary learning
 
 Flags to use with just --func train_save:
