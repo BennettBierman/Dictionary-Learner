@@ -2,6 +2,7 @@
 **Program that deploys K-SVD and Orthogonal Matching Pursuit to perform dictionary learning from black-and-white images**
 
 
+
 **ENVIRONMENT INSTALLATION:**
 - Clone/fork project
 - Install the appropriate version of conda for your OS
@@ -25,9 +26,9 @@ Files:
 - **dict_learner.py**: object responsible for running dictionary learning algorithms and holding data
 - **image_utils.py**: utility functions for easily handling image data
 
-
-
-**Getting Started**
+\\
+//
+**GETTING STARTED**
 
 All features can be accessed through the starting command: python main.py
 
@@ -35,7 +36,7 @@ There are three main features of the program accessed through the flag: --func
 
 - **train**: creates a new spare representation and dictionary from an input image then plots the recreated and original images
 - **train_save**: performs the actions of train, then saves the state of your DictionaryLearner object (original image, dictionary, spare representation) in text files in the encodings directory
-- **load_show**: uploaded a saved encoding from the 
+- **load_show**: uploades state from saved text files in encodings and plots original image and sparse representation
 
 
 
