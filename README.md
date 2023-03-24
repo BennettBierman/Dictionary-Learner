@@ -52,7 +52,7 @@ Flags to use with --func train or --func train_save:
 
 - --pat_size [int]: patch size used when augmenting original image for dictionary learning
 - --atoms [int]: number of atoms in the learned dictionary
-- sparse [int]: sparsity of each column in the sparse representation 
+- --sparse [int]: sparsity of each column in the sparse representation 
 - --iter [int]: number of iterations K-SVD run
 - --image [str]: name of file in images folder (do not need to include ".png" or file's path) that can be used for dictionary learning
 - --path [str]: path to any image on computer that can also be used for dictionary learning
