@@ -34,9 +34,9 @@ All features can be accessed through the starting command: python main.py
 
 There are three main features of the program that are accessed through the flag: --func
 
-- **train**: creates a new spare representation and dictionary from an input image, plots the recreated and original images, and prints information about the accuracy and sparsity of the representation. The accuracy is calculated by dividing the norm of the residual by the norm of the image we are representing, and subtracting this fraction from one.
-- **train_save**: performs the actions of train, then saves the state of your DictionaryLearner object (original image, dictionary, spare representation) in text files in the encodings directory. Given a prefix "x", files are saved as x_image, x_dictionary, and x_sparse in this folder
-- **load_show**: uploades state from saved text files in encodings and plots original image and sparse representation
+- **train**: creates a new sparse representation and dictionary from an input image, plots the recreated and original images, and prints information about the accuracy and sparsity of the representation. The accuracy is calculated by dividing the norm of the residual by the norm of the image we are representing, and subtracting this fraction from one. Sparsity is just the percent of values that are zero.
+- **train_save**: performs the actions of train, then saves the state of the DictionaryLearner object (original image, dictionary, spare representation) in text files in the encodings directory. Given a prefix "x", files are saved as x_image, x_dictionary, and x_sparse in this folder
+- **load_show**: uploades state from saved text files in encodings and plots the original image and sparse representation of this state
 
 
 
