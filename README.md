@@ -12,7 +12,7 @@
 
 **REPO OUTLINE:**
 
-This program allows you to create novel spare representations of images through K-SVD and OMP dictionary learning
+This program allows you to create novel sparse representations of images through K-SVD and OMP dictionary learning
 
 Directories:
 
@@ -24,5 +24,18 @@ Files:
 - **main.py**: access point of the entire project
 - **dict_learner.py**: object responsible for running dictionary learning algorithms and holding data
 - **image_utils.py**: utility functions for easily handling image data
+
+
+
+**Getting Started**
+
+All features can be accessed through the starting command: python main.py
+
+There are three main features of the program accessed through the flag: --func
+
+- **train**: creates a new spare representation and dictionary from an input image then plots the recreated and original images
+- **train_save**: performs the actions of train, then saves the state of your DictionaryLearner object (original image, dictionary, spare representation) in text files in the encodings directory
+- **load_show**: uploaded a saved encoding from the 
+
 
 
