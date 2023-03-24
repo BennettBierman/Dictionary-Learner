@@ -16,7 +16,7 @@ class DictionaryLearner:
         Normalizes input to black-and-white image, creates image representation
         through patches, initializes dictionary to random columns of representation,
         and sets constants
-        :param image: original png image OR path to saved state
+        :param image: original png image
         :param patch_size: dimension for square patches
         :param atoms: number of columns in dictionary
         """
@@ -48,12 +48,10 @@ class DictionaryLearner:
             self.features = x * y  # rows of image representation
             self.signals = r * c  # columns of image representation
             self.atoms = dict_col  # columns of dictionary
-
             r, c, vals = np.loadtxt(f'encodings/{image}_sparse')
             temp = np.zeros((self.atoms, self.signals))
             temp[r.astype('int'), c.astype('int')] = vals
             self.sparse_rep = temp
-
             self.recreation = None
             self.set_recreation()
 
@@ -96,7 +94,7 @@ class DictionaryLearner:
         """
         K-SVD Dictionary Learning Algorithm
         Simultaneously generates a sparse encoding and a useful dictionary of atoms
-        given a signal or database of signals
+        given an image representation
         Reports accuracy and sparsity of encoding
         :param L: sparsity of each encoding
         :param iter: iterations of the K-SVD algorithm
@@ -145,7 +143,7 @@ class DictionaryLearner:
 
     def save_state(self, file_name):
         """
-        Save true image, dictionary, and sparse representation to a text file
+        Save true image, dictionary, and sparse representation to text files
         :param file_name
         """
         if self.sparse_rep is not None:
@@ -170,14 +168,12 @@ class DictionaryLearner:
 
     def get_recreation(self):
         """
-        Returns recreated image
         :return: recreated image
         """
         return self.recreation
 
     def get_image(self):
         """
-        Returns true image
         :return: true image
         """
         return self.true_image

@@ -37,7 +37,7 @@ if __name__ == '__main__':
         learner.ksvd_train(args.sparse, args.iter)
         rec = learner.get_recreation()
 
-        # Save state of DL object to text file iin encodings folder
+        # Save state of dLearner object to text file in encodings folder
         if args.func == 'train_save':
             learner.save_state(args.save_state)
             print('State Saved \n')
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     elif args.func == 'load_show':
         """
         Load DictionaryLearner object from text files 
-        Plot original input and spare representation 
+        Plot original input and sparse representation 
         """
         learner = dLearner(args.load_state, None)
         rec = learner.get_recreation()
