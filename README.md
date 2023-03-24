@@ -26,8 +26,8 @@ Files:
 - **dict_learner.py**: object responsible for running dictionary learning algorithms and holding data
 - **image_utils.py**: utility functions for easily handling image data
 
-\\
-//
+
+
 **GETTING STARTED**
 
 All features can be accessed through the starting command: python main.py
@@ -40,3 +40,6 @@ There are three main features of the program accessed through the flag: --func
 
 
 
+**FUNCTIONALITY**
+The three central features can be fine tuned with a number of flags
+- --pat_size [int]:
